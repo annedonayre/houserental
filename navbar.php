@@ -6,6 +6,13 @@
 	nav#sidebar{
 		/*background: url(assets/uploads/<?php echo $_SESSION['system']['cover_img'] ?>) !important*/
 	}
+	.nav-item {
+		background: #131e2e !important;
+		color: #ffffff !important;
+	}
+	.active {
+		background: #7b8d41 !important;
+	}
 </style>
 
 <nav id="sidebar" class='mx-lt-5 bg-dark' >

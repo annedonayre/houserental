@@ -34,9 +34,47 @@
 		max-height: calc(100%)!important;
 		max-width: calc(100%)!important;
 	}
+    a {
+		color: #7d6544;
+		font-weight: bold;
+	}
+	.bg-dark {
+		background: #131e2e !important;
+	}
+	.bg-light {
+		background: #ebe5db !important;
+	}
+    .bd-card1 {
+        border-color: #92a264 !important;
+    }
+    .bg-card1 {
+        background-color: #92a264 !important;
+    }
+    .txt-card1 {
+        color: #92a264 !important;
+    }
+    .bd-card2 {
+        border-color: #c2a860 !important;
+    }
+    .bg-card2 {
+        background-color: #c2a860 !important;
+    }
+    .txt-card2 {
+        color: #c2a860 !important;
+    }
+    .bd-card3 {
+        border-color: #cf8758 !important;
+    }
+    .bg-card3 {
+        background-color: #cf8758 !important;
+    }
+    .txt-card3 {
+        color: #cf8758 !important;
+    }
+
 </style>
 
-<div class="container-fluid">
+<div class="container">
 	<div class="row mt-3 ml-3 mr-3">
         <div class="col-lg-12">
             <div class="card">
@@ -45,8 +83,8 @@
                     <hr>
                     <div class="row">
                         <div class="col-md-4 mb-3">
-                            <div class="card border-primary">
-                                <div class="card-body bg-primary">
+                            <div class="card bd-card1">
+                                <div class="card-body bg-card1">
                                     <div class="card-body text-white">
                                         <span class="float-right summary_icon"> <i class="fa fa-home "></i></span>
                                         <h4><b>
@@ -58,15 +96,15 @@
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <a href="index.php?page=houses" class="text-primary float-right">View List <span class="fa fa-angle-right"></span></a>
+                                            <a href="index.php?page=houses" class="txt-card1 float-right">View List <span class="fa fa-angle-right"></span></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <div class="card border-warning">
-                                <div class="card-body bg-warning">
+                            <div class="card bd-card2">
+                                <div class="card-body bg-card2">
                                     <div class="card-body text-white">
                                         <span class="float-right summary_icon"> <i class="fa fa-user-friends "></i></span>
                                         <h4><b>
@@ -78,23 +116,23 @@
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <a href="index.php?page=tenants" class="text-primary float-right">View List <span class="fa fa-angle-right"></span></a>
+                                            <a href="index.php?page=tenants" class="txt-card2 float-right">View List <span class="fa fa-angle-right"></span></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <div class="card border-success">
-                                <div class="card-body bg-success">
+                            <div class="card bd-card3">
+                                <div class="card-body bg-card3">
                                     <div class="card-body text-white">
                                         <span class="float-right summary_icon"> <i class="fa fa-file-invoice "></i></span>
                                         <h4><b>
                                             <?php 
-                                             $payment = $conn->query("SELECT sum(amount) as paid FROM payments where date(date_created) = '".date('Y-m-d')."' ");
+                                             $payment = $conn->query("SELECT SUM(amount) AS paid FROM payments WHERE YEAR(date_created) = YEAR(CURDATE()) AND MONTH(date_created) = MONTH(CURDATE());");
                                              $chart_array = $conn->query("WITH months AS ( SELECT DATE_FORMAT(MAKEDATE(YEAR(CURDATE()), 1) + INTERVAL (n - 1) MONTH, '%Y-%m') AS month FROM ( SELECT 1 AS n UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9 UNION ALL SELECT 10 UNION ALL SELECT 11 UNION ALL SELECT 12 ) numbers ) SELECT GROUP_CONCAT(IFNULL(mt.monthly_sum, 0) ORDER BY m.month SEPARATOR ', ') AS monthly_sums FROM months m LEFT JOIN ( SELECT DATE_FORMAT(date_created, '%Y-%m') AS month, SUM(amount) AS monthly_sum FROM payments WHERE YEAR(date_created) = YEAR(CURDATE()) GROUP BY month ) mt ON m.month = mt.month;"); 
                                              echo $payment->num_rows > 0 ? number_format($payment->fetch_array()['paid'],2) : 0;
-                                            //  echo $chart_array->num_rows > 0 ? $chart_array->fetch_array()['monthly_sums'] : 0;
+                                                //  echo $chart_array->num_rows > 0 ? $chart_array->fetch_array()['monthly_sums'] : 0;
                                              ?>
                                         </b></h4>
                                         <p><b>Payments This Month</b></p>
@@ -103,15 +141,13 @@
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <a href="index.php?page=invoices" class="text-primary float-right">View Payments <span class="fa fa-angle-right"></span></a>
+                                            <a href="index.php?page=invoices" class="txt-card3 float-right">View Payments <span class="fa fa-angle-right"></span></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    
                 </div>
             </div>      			
         </div>
@@ -139,7 +175,9 @@
         datasets: [{
             label: 'Total Amount of Payments Made',
             data: [<?php echo $chart_array->num_rows > 0 ? $chart_array->fetch_array()['monthly_sums'] : 0; ?>],
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: '#92a264',
+            borderColor: '#92a264',
         }]
     },
     options: {

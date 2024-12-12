@@ -38,13 +38,13 @@
     border: unset;
     font-size: 27px;
     top: 0;
-}
-#viewer_modal .modal-dialog {
-        width: 80%;
-    max-width: unset;
-    height: calc(90%);
-    max-height: unset;
-}
+} 
+  #viewer_modal .modal-dialog {
+          width: 80%;
+      max-width: unset;
+      height: calc(90%);
+      max-height: unset;
+  }
   #viewer_modal .modal-content {
        background: black;
     border: unset;
@@ -57,6 +57,41 @@
     max-height: calc(100%);
     max-width: calc(100%);
   }
+  a {
+		color: #7d6544;
+		font-weight: bold;
+	}
+	.bg-dark {
+		background: #131e2e !important;
+	}
+	.bg-light {
+		background: #ebe5db !important;
+	}
+	.btn-primary {
+		color: #ffffff;
+		background: #7b8d41 !important;
+		border: none;
+	}
+	.card {
+		background: #ebe5db !important;
+	}
+	.text-green {
+        color: #7b8d41;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+    .text-black {
+        color: black;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+	.bg-img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 </style>
 
 <body>
@@ -67,7 +102,7 @@
     </div>
   </div>
   
-  <main id="view-panel" >
+  <main id="view-panel" class="bg-light" style="height:1000px;">
       <?php $page = isset($_GET['page']) ? $_GET['page'] :'home'; ?>
   	<?php include $page.'.php' ?>
   	

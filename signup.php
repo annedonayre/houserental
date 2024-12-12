@@ -71,34 +71,76 @@ header("location:index.php?page=home");
     border-radius: 50% 50%;
     color: #000000b3;
     z-index: 10;
-}
-div#login-right::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100%);
-    height: calc(100%);
-    /*background: #000000e0;*/
-}
+	}
+	div#login-right::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: calc(100%);
+		height: calc(100%);
+		/*background: #000000e0;*/
+	}
+	a {
+		color: #7d6544;
+		font-weight: bold;
+	}
+	.bg-dark {
+		background: #131e2e !important;
+	}
+	.bg-light {
+		background: #ebe5db !important;
+	}
+	.btn-primary {
+		color: #ffffff;
+		background: #7b8d41 !important;
+		border: none;
+	}
+	.card {
+		background: #ebe5db !important;
+	}
+	.text-green {
+        color: #7b8d41;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+    .text-black {
+        color: black;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+	.bg-img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 
 </style>
 
 <body>
 
-
   <main id="main" class=" bg-light">
   		<div id="login-left" class="bg-dark">
+			<img class="bg-img" src="assets/img/frontpage.png" alt="">
   		</div>
 
   		<div id="login-right" class="bg-light">
   			<div class="w-100">
-			<h4 class="text-center"><b><?php echo $_SESSION['system']['name'] ?></b></h4>
+			<h1 class="text-center"><b><?php echo $_SESSION['system']['name'] ?></b></h1>
 			<br>
+			<br>
+			<div class="container-fluid col-md-8">
+				<h5 class="text-green">Let Us</h5>
+				<h5 class="text-black">Guide You Home.</h5>
+			</div>
 			<br>
   			<div class="card col-md-8">
   				<div class="card-body">
-  					<form id="login-form">
+				  	<div id="msg"></div>
+  					<form id="manage-user">
+					  	<input type="hidden" name="id" value="">
 					  	<div class="form-group">
   							<label for="name" class="control-label">Full Name</label>
   							<input type="text" id="name" name="name" class="form-control" required>
@@ -125,12 +167,8 @@ div#login-right::before {
   			</div>
   			</div>
   		</div>
-   
-
   </main>
-
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
 
 </body>
 <script>
@@ -227,18 +265,17 @@ window._conf = function($msg='',$func='',$params = []){
   })
 
 	$('#manage-user').submit(function(e){
-		console.log("errawr");
 		e.preventDefault();
 		start_load()
 		$.ajax({
-			url:'ajax.php?action=save_user',
+			url:'signup_handler.php',
 			method:'POST',
 			data:$(this).serialize(),
 			success:function(resp){
 				if(resp == 1){
-					alert_toast("Data successfully saved",'success')
+					$('#msg').html('<div class="alert alert-success">User added successfully!</div>')
 					setTimeout(function(){
-						location.reload()
+						window.location.href = 'login.php';
 					},1500)
 				}else{
 					$('#msg').html('<div class="alert alert-danger">Username already exist</div>')
@@ -247,5 +284,5 @@ window._conf = function($msg='',$func='',$params = []){
 			}
 		})
 	})
-</script>	
+</script>
 </html>

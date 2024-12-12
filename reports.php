@@ -1,6 +1,41 @@
 <?php 
 include 'db_connect.php';
 ?>
+
+<style>
+	.bg-dark {
+		background: #131e2e !important;
+	}
+	.bg-light {
+		background: #ebe5db !important;
+	}
+	.btn-primary {
+		color: #ffffff;
+		background: #7b8d41 !important;
+		border: none;
+	}
+	.card {
+		background: #ebe5db !important;
+	}
+	.text-green {
+		color: #7b8d41;
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+	}
+	.text-black {
+		color: black;
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+	}
+	.bg-img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+</style>
+
 <div class="container-fluid">
 	<div class="col-lg-12">
 		<div class="card">
@@ -8,7 +43,7 @@ include 'db_connect.php';
 				<div class="col-md-12">
 					<div class="row">
 						<div class="col-sm-4">
-							<div class="card border-primary">
+							<div class="card">
 								<div class="card-body bg-light">
 									<h4><b>Monthly Payments Report</b></h4>
 								</div>
@@ -20,7 +55,7 @@ include 'db_connect.php';
 							</div>
 						</div>
 						<div class="col-sm-4">
-							<div class="card border-primary">
+							<div class="card">
 								<div class="card-body bg-light">
 									<h4><b>Rental Balances Report</b></h4>
 								</div>

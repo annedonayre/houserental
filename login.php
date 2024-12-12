@@ -64,37 +64,77 @@ header("location:index.php?page=home");
 		z-index: 1
 	}
 	.logo {
-    margin: auto;
-    font-size: 8rem;
-    background: white;
-    padding: .5em 0.7em;
-    border-radius: 50% 50%;
-    color: #000000b3;
-    z-index: 10;
-}
-div#login-right::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100%);
-    height: calc(100%);
-    /*background: #000000e0;*/
-}
+		margin: auto;
+		font-size: 8rem;
+		background: white;
+		padding: .5em 0.7em;
+		border-radius: 50% 50%;
+		color: #000000b3;
+		z-index: 10;
+	}
+	div#login-right::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: calc(100%);
+		height: calc(100%);
+		/*background: #000000e0;*/
+	}
+	a {
+		color: #7d6544;
+		font-weight: bold;
+	}
+	.bg-dark {
+		background: #131e2e !important;
+	}
+	.bg-light {
+		background: #ebe5db !important;
+	}
+	.btn-primary {
+		color: #ffffff;
+		background: #7b8d41 !important;
+		border: none;
+	}
+	.card {
+		background: #ebe5db !important;
+	}
+	.text-green {
+        color: #7b8d41;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+    .text-black {
+        color: black;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+	.bg-img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 
 </style>
 
 <body>
 
-
-  <main id="main" class=" bg-light">
+  <main id="main">
   		<div id="login-left" class="bg-dark">
+			<img class="bg-img" src="assets/img/frontpage.png" alt="">
   		</div>
 
   		<div id="login-right" class="bg-light">
   			<div class="w-100">
-			<h4 class="text-center"><b><?php echo $_SESSION['system']['name'] ?></b></h4>
+			<h1 class="text-center"><b><?php echo $_SESSION['system']['name'] ?></b></h1>
 			<br>
+			<br>
+			<div class="container-fluid col-md-8">
+				<h5 class="text-green">Let Us</h5>
+				<h5 class="text-black">Guide You Home.</h5>
+			</div>
 			<br>
   			<div class="card col-md-8">
   				<div class="card-body">
