@@ -120,8 +120,8 @@
         <div class="col">
             <div class="card">
                 <div class="card-body">
-                    <div class="row" style="height: 100%; justify-content: center; align-items: center;">
-                        <canvas id="chtPayments" style="width:100%; max-width:500px; height: auto; max-height:500px;"></canvas>
+                    <div class="row" style="height: 100%;">
+                        <canvas id="chtPayments" style="width:100%; max-width:1200px; height:100%; max-height:500px;"></canvas>
                     </div>
                 </div>
             </div>

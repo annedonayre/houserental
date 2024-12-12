@@ -93,7 +93,7 @@ div#login-right::before {
 
   		<div id="login-right" class="bg-light">
   			<div class="w-100">
-			<h4 class="text-white text-center"><b><?php echo $_SESSION['system']['name'] ?></b></h4>
+			<h4 class="text-center"><b><?php echo $_SESSION['system']['name'] ?></b></h4>
 			<br>
 			<br>
   			<div class="card col-md-8">
@@ -110,6 +110,7 @@ div#login-right::before {
   						<center><button class="btn-sm btn-block btn-wave col-md-4 btn-primary">Login</button></center>
   					</form>
   				</div>
+				<center><p><small>No account? <a href="register.php">Sign Up </a>here.</small></p></center>
   			</div>
   			</div>
   		</div>
