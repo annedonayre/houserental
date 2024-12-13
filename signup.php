@@ -17,7 +17,6 @@ ob_end_flush();
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title><?php echo $_SESSION['system']['name'] ?></title>
- 	
 
 <?php include('./header.php'); ?>
 <?php 
@@ -27,6 +26,7 @@ header("location:index.php?page=home");
 ?>
 
 </head>
+<link rel="stylesheet" href="css/overrides.css">
 <style>
 	body{
 		width: 100%;
@@ -80,41 +80,6 @@ header("location:index.php?page=home");
 		width: calc(100%);
 		height: calc(100%);
 		/*background: #000000e0;*/
-	}
-	a {
-		color: #7d6544;
-		font-weight: bold;
-	}
-	.bg-dark {
-		background: #131e2e !important;
-	}
-	.bg-light {
-		background: #ebe5db !important;
-	}
-	.btn-primary {
-		color: #ffffff;
-		background: #7b8d41 !important;
-		border: none;
-	}
-	.card {
-		background: #ebe5db !important;
-	}
-	.text-green {
-        color: #7b8d41;
-        margin: 0;
-        padding: 0;
-        font-weight: bold;
-    }
-    .text-black {
-        color: black;
-        margin: 0;
-        padding: 0;
-        font-weight: bold;
-    }
-	.bg-img{
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
 	}
 
 </style>

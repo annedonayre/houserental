@@ -1,0 +1,92 @@
+/* main */
+a {
+    color: #7d6544;
+    font-weight: bold;
+}
+.bg-dark {
+    background: #131e2e !important;
+}
+.bg-light {
+    background: #ebe5db !important;
+}
+.btn-primary {
+    color: #ffffff;
+    background: #7b8d41 !important;
+    border: none;
+}
+.btn-danger {
+    color: #ffffff;
+    background: #cf8758 !important;
+    border: none;
+}
+.btn-outline-primary {
+    color: #7b8d41;
+    background: unset !important;
+    border-color: #7b8d41;
+}
+.btn-outline-primary:hover {
+    color: #fff;
+    background: #7b8d41 !important;
+    border-color: #7b8d41;
+}
+.btn-outline-danger {
+    color: #cf8758;
+    background: unset !important;
+    border-color: #cf8758;
+}
+.btn-outline-danger:hover {
+    color: #fff;
+    background: #cf8758 !important;
+    border-color: #cf8758;
+}
+
+/* login/signup */
+.card {
+    background: #ebe5db !important;
+}
+.text-green {
+    color: #7b8d41;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.text-black {
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.bg-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* home cards */
+.bd-card1 {
+    border-color: #92a264 !important;
+}
+.bg-card1 {
+    background-color: #92a264 !important;
+}
+.txt-card1 {
+    color: #92a264 !important;
+}
+.bd-card2 {
+    border-color: #c2a860 !important;
+}
+.bg-card2 {
+    background-color: #c2a860 !important;
+}
+.txt-card2 {
+    color: #c2a860 !important;
+}
+.bd-card3 {
+    border-color: #cf8758 !important;
+}
+.bg-card3 {
+    background-color: #cf8758 !important;
+}
+.txt-card3 {
+    color: #cf8758 !important;
+}

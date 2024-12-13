@@ -9,13 +9,13 @@
 			<form action="" id="manage-category">
 				<div class="card">
 					<div class="card-header">
-						    Category Form
+						    Add/Edit Category
 				  	</div>
 					<div class="card-body">
 							<input type="hidden" name="id">
 							<div class="form-group">
 								<label class="control-label">Name</label>
-								<input type="text" class="form-control" name="name">
+								<input type="text" class="form-control" name="name" autocomplete="off" required>
 							</div>
 					</div>
 							

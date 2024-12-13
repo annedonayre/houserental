@@ -7,7 +7,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></title>
- 	
+  <link rel="stylesheet" href="css/overrides.css">
 
 <?php
   if(!isset($_SESSION['login_id']))
@@ -57,41 +57,6 @@
     max-height: calc(100%);
     max-width: calc(100%);
   }
-  a {
-		color: #7d6544;
-		font-weight: bold;
-	}
-	.bg-dark {
-		background: #131e2e !important;
-	}
-	.bg-light {
-		background: #ebe5db !important;
-	}
-	.btn-primary {
-		color: #ffffff;
-		background: #7b8d41 !important;
-		border: none;
-	}
-	.card {
-		background: #ebe5db !important;
-	}
-	.text-green {
-        color: #7b8d41;
-        margin: 0;
-        padding: 0;
-        font-weight: bold;
-    }
-    .text-black {
-        color: black;
-        margin: 0;
-        padding: 0;
-        font-weight: bold;
-    }
-	.bg-img{
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
 </style>
 
 <body>

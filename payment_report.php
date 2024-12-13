@@ -4,6 +4,7 @@
 $month_of = isset($_GET['month_of']) ? $_GET['month_of'] : date('Y-m');
 
 ?>
+<link rel="stylesheet" href="css/overrides.css">
 <style>
 	.on-print{
 		display: none;
@@ -41,7 +42,7 @@ $month_of = isset($_GET['month_of']) ? $_GET['month_of'] : date('Y-m');
 					<hr>
 						<div class="row">
 							<div class="col-md-12 mb-2">
-							<button class="btn btn-sm btn-block btn-success col-md-2 ml-1 float-right" type="button" id="print"><i class="fa fa-print"></i> Print</button>
+							<button class="btn btn-sm btn-block btn-primary col-md-2 ml-1 float-right" type="button" id="print"><i class="fa fa-print"></i> Print</button>
 							</div>
 						</div>
 					<div id="report">
@@ -56,7 +57,7 @@ $month_of = isset($_GET['month_of']) ? $_GET['month_of'] : date('Y-m');
 										<th>#</th>
 										<th>Date</th>
 										<th>Tenant</th>
-										<th>House #</th>
+										<th>Unit #</th>
 										<th>Invoice</th>
 										<th>Amount</th>
 									</tr>

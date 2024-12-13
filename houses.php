@@ -9,14 +9,14 @@
 			<form action="" id="manage-house">
 				<div class="card">
 					<div class="card-header">
-						    House Form
+						    Add/Edit Unit
 				  	</div>
 					<div class="card-body">
 							<div class="form-group" id="msg"></div>
 							<input type="hidden" name="id">
 							<div class="form-group">
-								<label class="control-label">House No</label>
-								<input type="text" class="form-control" name="house_no" required="">
+								<label class="control-label">Unit No</label>
+								<input type="text" class="form-control" name="house_no" autocomplete="off" required>
 							</div>
 							<div class="form-group">
 								<label class="control-label">Category</label>
@@ -39,7 +39,7 @@
 							</div>
 							<div class="form-group">
 								<label class="control-label">Price</label>
-								<input type="number" class="form-control text-right" name="price" step="any" required="">
+								<input type="number" class="form-control text-right" name="price" step="any" autocomplete="off" required>
 							</div>
 					</div>
 					<div class="card-footer">
@@ -59,14 +59,14 @@
 			<div class="col-md-8">
 				<div class="card">
 					<div class="card-header">
-						<b>House List</b>
+						<b>Unit List</b>
 					</div>
 					<div class="card-body">
 						<table class="table table-bordered table-hover">
 							<thead>
 								<tr>
 									<th class="text-center">#</th>
-									<th class="text-center">House</th>
+									<th class="text-center">Details</th>
 									<th class="text-center">Action</th>
 								</tr>
 							</thead>
@@ -79,8 +79,8 @@
 								<tr>
 									<td class="text-center"><?php echo $i++ ?></td>
 									<td class="">
-										<p>House #: <b><?php echo $row['house_no'] ?></b></p>
-										<p><small>House Type: <b><?php echo $row['cname'] ?></b></small></p>
+										<p>Unit #: <b><?php echo $row['house_no'] ?></b></p>
+										<p><small>Unit Type: <b><?php echo $row['cname'] ?></b></small></p>
 										<p><small>Description: <b><?php echo $row['description'] ?></b></small></p>
 										<p><small>Price: <b><?php echo number_format($row['price'],2) ?></b></small></p>
 									</td>

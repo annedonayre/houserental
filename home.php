@@ -1,4 +1,5 @@
 <?php include 'db_connect.php' ?>
+<link rel="stylesheet" href="css/overrides.css">
 <style>
    span.float-right.summary_icon {
     font-size: 3rem;
@@ -6,7 +7,7 @@
     right: 1rem;
     top: 0;
 }
-.imgs{
+    .imgs{
 		margin: .5em;
 		max-width: calc(100%);
 		max-height: calc(100%);
@@ -34,43 +35,6 @@
 		max-height: calc(100%)!important;
 		max-width: calc(100%)!important;
 	}
-    a {
-		color: #7d6544;
-		font-weight: bold;
-	}
-	.bg-dark {
-		background: #131e2e !important;
-	}
-	.bg-light {
-		background: #ebe5db !important;
-	}
-    .bd-card1 {
-        border-color: #92a264 !important;
-    }
-    .bg-card1 {
-        background-color: #92a264 !important;
-    }
-    .txt-card1 {
-        color: #92a264 !important;
-    }
-    .bd-card2 {
-        border-color: #c2a860 !important;
-    }
-    .bg-card2 {
-        background-color: #c2a860 !important;
-    }
-    .txt-card2 {
-        color: #c2a860 !important;
-    }
-    .bd-card3 {
-        border-color: #cf8758 !important;
-    }
-    .bg-card3 {
-        background-color: #cf8758 !important;
-    }
-    .txt-card3 {
-        color: #cf8758 !important;
-    }
 
 </style>
 
@@ -157,7 +121,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row" style="height: 100%;">
-                        <canvas id="chtPayments" style="width:100%; max-width:1200px; height:100%; max-height:500px;"></canvas>
+                        <canvas id="chtPayments" style="width:100%; max-width:600px; height:100%; max-height:500px;"></canvas>
                     </div>
                 </div>
             </div>
@@ -171,7 +135,7 @@
     new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
             label: 'Total Amount of Payments Made',
             data: [<?php echo $chart_array->num_rows > 0 ? $chart_array->fetch_array()['monthly_sums'] : 0; ?>],
@@ -184,6 +148,13 @@
         scales: {
             y: {
                 beginAtZero: true
+            },
+            x: {
+                ticks: {
+                    autoSkip: false,
+                    maxRotation: 45,
+                    minRotation: 45
+                }
             }
         }
     }

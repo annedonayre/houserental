@@ -26,7 +26,7 @@
 								<tr>
 									<th class="text-center">#</th>
 									<th class="">Name</th>
-									<th class="">House Rented</th>
+									<th class="">Unit Rented</th>
 									<th class="">Monthly Rate</th>
 									<th class="">Outstanding Balance</th>
 									<th class="">Last Payment</th>
