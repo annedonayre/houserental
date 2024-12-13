@@ -161,7 +161,6 @@ CREATE TABLE `tenants` (
 --
 
 INSERT INTO `tenants` (`id`, `firstname`, `middlename`, `lastname`, `email`, `contact`, `house_id`, `status`, `date_in`) VALUES
-(2, 'John', 'C', 'Smith', 'jsmith@sample.com', '+18456-5455-55', 1, 0, '2020-07-02'),
 (3, 'Willianne Lorraine', 'M.', 'Donayre', 'annedonayre254@gmail.com', '09350167343', 3, 1, '2023-12-08'),
 (4, 'Wallen Paul', 'D.', 'Monzon', 'monzon.wallenpaul@ue.edu.ph', '09185857675', 5, 1, '2024-01-17'),
 (5, 'Ernest Gerald', 'B.', 'Dimaano', 'dimaano.ernestgerald@ue.edu.ph', '09498151746', 9, 1, '2024-03-13');
