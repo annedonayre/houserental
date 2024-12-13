@@ -3,6 +3,17 @@ include 'db_connect.php';
 ?>
 
 <style>
+	.imgs {
+		border-radius: 10%;
+        margin: .5em;
+		max-width: calc(100%);
+		max-height: 400px;
+	}
+	.imgs img{
+		max-width: calc(100%);
+		max-height: 400px;
+		cursor: pointer;
+	}
 	.bg-dark {
 		background: #131e2e !important;
 	}
@@ -67,6 +78,18 @@ include 'db_connect.php';
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-12">
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="assets/img/reports1.jpg" class="imgs">
+				</div>
+				<div class="col-md-6">
+					<img src="assets/img/reports2.jpg" class="imgs">
 				</div>
 			</div>
 		</div>

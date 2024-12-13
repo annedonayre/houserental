@@ -108,10 +108,12 @@
 		uni_modal("Tenants Payments","view_payment.php?id="+$(this).attr('data-id'),"large")
 		
 	})
+
 	$('.edit_tenant').click(function(){
 		uni_modal("Manage Tenant Details","manage_tenant.php?id="+$(this).attr('data-id'),"mid-large")
 		
 	})
+
 	$('.delete_tenant').click(function(){
 		_conf("Are you sure to delete this Tenant?","delete_tenant",[$(this).attr('data-id')])
 	})
@@ -123,12 +125,11 @@
 			method:'POST',
 			data:{id:$id},
 			success:function(resp){
-				if(resp==1){
+				if(resp==1) {
 					alert_toast("Data successfully deleted",'success')
 					setTimeout(function(){
 						location.reload()
 					},1500)
-
 				}
 			}
 		})

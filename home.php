@@ -7,8 +7,9 @@
     right: 1rem;
     top: 0;
 }
-    .imgs{
-		margin: .5em;
+    .imgs {
+		border-radius: 10%;
+        margin: .5em;
 		max-width: calc(100%);
 		max-height: calc(100%);
 	}
@@ -39,7 +40,7 @@
 </style>
 
 <div class="container">
-	<div class="row mt-3 ml-3 mr-3">
+	<div class="row mt-3">
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
@@ -116,12 +117,18 @@
             </div>      			
         </div>
     </div>
-    <div class="row mt-3 ml-3 mr-3">
+    <div class="row mt-3">
         <div class="col">
             <div class="card">
                 <div class="card-body">
-                    <div class="row" style="height: 100%;">
-                        <canvas id="chtPayments" style="width:100%; max-width:600px; height:100%; max-height:500px;"></canvas>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <canvas id="chtPayments" style="width:60%; max-width:600px; height:100%; max-height:500px;"></canvas>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="assets/img/dashboard.jpg" alt="" class="imgs">
+                            <img src="assets/img/hassle-free.png" alt="" class="imgs">
+                        </div>
                     </div>
                 </div>
             </div>

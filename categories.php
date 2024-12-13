@@ -1,34 +1,55 @@
 <?php include('db_connect.php');?>
 
+<link rel="stylesheet" href="css/overrides.css">
+
+<style>
+	.imgs {
+		border-radius: 10%;
+        margin: .5em;
+		max-width: calc(100%);
+		max-height: calc(100%);
+	}
+	.imgs img{
+		max-width: calc(100%);
+		max-height: calc(100%);
+		cursor: pointer;
+	}
+</style>
+
 <div class="container-fluid">
 	
 	<div class="col-lg-12">
 		<div class="row">
 			<!-- FORM Panel -->
 			<div class="col-md-4">
-			<form action="" id="manage-category">
-				<div class="card">
-					<div class="card-header">
-						    Add/Edit Category
-				  	</div>
-					<div class="card-body">
-							<input type="hidden" name="id">
-							<div class="form-group">
-								<label class="control-label">Name</label>
-								<input type="text" class="form-control" name="name" autocomplete="off" required>
-							</div>
-					</div>
-							
-					<div class="card-footer">
-						<div class="row">
-							<div class="col-md-12">
-								<button class="btn btn-sm btn-primary col-sm-3 offset-md-3"> Save</button>
-								<button class="btn btn-sm btn-default col-sm-3" type="button" onclick="$('#manage-category').get(0).reset()"> Cancel</button>
+				<form action="" id="manage-category">
+					<div class="card">
+						<div class="card-header">
+								Add/Edit Category
+						</div>
+						<div class="card-body">
+								<input type="hidden" name="id">
+								<div class="form-group">
+									<label class="control-label">Name</label>
+									<input type="text" class="form-control" name="name" autocomplete="off" required>
+								</div>
+						</div>
+								
+						<div class="card-footer">
+							<div class="row">
+								<div class="col-md-12">
+									<button class="btn btn-sm btn-primary col-sm-3 offset-md-3"> Save</button>
+									<button class="btn btn-sm btn-default col-sm-3" type="button" onclick="$('#manage-category').get(0).reset()"> Cancel</button>
+								</div>
 							</div>
 						</div>
 					</div>
+				</form>
+				<div class="card mt-2">
+					<div class="card-body">
+						<img src="assets/img/categories.jpeg" alt="" class="imgs">
+					</div>
 				</div>
-			</form>
 			</div>
 			<!-- FORM Panel -->
 

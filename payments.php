@@ -26,7 +26,7 @@
 								<tr>
 									<th class="text-center">#</th>
 									<th class="">Tenant</th>
-									<th class="">House #</th>
+									<th class="">Unit #</th>
 									<th class="">Outstanding Balance</th>
 									<th class="">Last Payment</th>
 									<th class="text-center">Action</th>
