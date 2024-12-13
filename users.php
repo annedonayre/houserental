@@ -2,6 +2,8 @@
 
 ?>
 
+<link rel="stylesheet" href="css/overrides.css">
+
 <div class="container-fluid">
 	
 	<div class="row">
