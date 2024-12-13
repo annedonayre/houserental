@@ -248,16 +248,20 @@ Class Action {
 		$data .= ", description = '$description' ";
 		$data .= ", category_id = '$category_id' ";
 		$data .= ", price = '$price' ";
-		$chk = $this->db->query("SELECT * FROM houses where house_no = '$house_no' ")->num_rows;
-		if($chk > 0 ){
+		$chk = $this->db->query("SELECT * FROM houses where house_no = '$house_no'")->num_rows;
+		if ($chk == 1) {
+			$save = $this->db->query("UPDATE houses set $data where id = $id");
+		}
+		elseif($chk < 1) {
+			if(empty($id)){
+				$save = $this->db->query("INSERT INTO houses (house_no, category_id, description, price) VALUES ('$house_no', '$category_id', '$description', '$price')");
+			}
+		}
+		else {
 			return 2;
 			exit;
 		}
-			if(empty($id)){
-				$save = $this->db->query("INSERT INTO houses set $data");
-			}else{
-				$save = $this->db->query("UPDATE houses set $data where id = $id");
-			}
+
 		if($save)
 			return 1;
 	}
