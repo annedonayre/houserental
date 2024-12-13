@@ -106,6 +106,7 @@ header("location:index.php?page=home");
 				  	<div id="msg"></div>
   					<form id="manage-user">
 					  	<input type="hidden" name="id" value="">
+						<input type="hidden" name="type" value="1">
 					  	<div class="form-group">
   							<label for="name" class="control-label">Full Name</label>
   							<input type="text" id="name" name="name" class="form-control" required>
@@ -118,13 +119,6 @@ header("location:index.php?page=home");
   							<label for="password" class="control-label">Password</label>
   							<input type="password" id="password" name="password" class="form-control" required>
   						</div>
-						<div class="form-group">
-							<label for="type">User Type</label>
-							<select name="type" id="type" class="custom-select">
-								<option value="2">Staff</option>
-								<option value="1">Admin</option>
-							</select>
-						</div>
   						<center><button class="btn-sm btn-block btn-wave col-md-4 btn-primary">Submit</button></center>
   					</form>
   				</div>

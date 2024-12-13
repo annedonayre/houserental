@@ -31,15 +31,9 @@ foreach($user->fetch_array() as $k =>$v){
 		<?php if(isset($meta['type']) && isset($_GET['mtype'])): ?>
             <input type="hidden" name="type" value="<?php echo $meta['type'] ?>">
 		<?php else: ?>
-		<?php if(!isset($_GET['mtype'])): ?>
-		<div class="form-group">
-			<label for="type">User Type</label>
-			<select name="type" id="type" class="custom-select">
-				<option value="2" <?php echo isset($meta['type']) && $meta['type'] == 2 ? 'selected': '' ?>>Staff</option>
-				<option value="1" <?php echo isset($meta['type']) && $meta['type'] == 1 ? 'selected': '' ?>>Admin</option>
-			</select>
-		</div>
-		<?php endif; ?>
+			<?php if(!isset($_GET['mtype'])): ?>
+			<input type="hidden" name="type" value="1">
+			<?php endif; ?>
 		<?php endif; ?>
 		
 
