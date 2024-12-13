@@ -7,11 +7,11 @@ include 'db_connect.php';
 		border-radius: 10%;
         margin: .5em;
 		max-width: calc(100%);
-		max-height: 400px;
+		max-height: calc(100%);
 	}
 	.imgs img{
 		max-width: calc(100%);
-		max-height: 400px;
+		max-height: calc(100%);
 		cursor: pointer;
 	}
 	.bg-dark {
@@ -86,10 +86,10 @@ include 'db_connect.php';
 		<div class="card-body">
 			<div class="row">
 				<div class="col-md-6">
-					<img src="assets/img/reports1.jpg" class="imgs">
+					<img src="assets/img/reports1.jpg" class="imgs" style="height:400px;">
 				</div>
 				<div class="col-md-6">
-					<img src="assets/img/reports2.jpg" class="imgs">
+					<img src="assets/img/reports2.jpg" class="imgs" style="height:400px;">
 				</div>
 			</div>
 		</div>
